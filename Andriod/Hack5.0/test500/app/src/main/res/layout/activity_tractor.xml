@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_view"
+            android:layout_width="335dp"
+            android:layout_height="200dp"/>
+
+
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorPrimary" />
+    </GridLayout>
+
+    <Button
+
+        android:id="@+id/up"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+
+        android:layout_below="@+id/gridLayout"
+        android:layout_toEndOf="@+id/left1"
+        android:text="Up " />
+
+    <Button
+        android:id="@+id/down"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+
+        android:layout_alignStart="@+id/up"
+        android:layout_below="@+id/jcb1"
+        android:text="Down" />
+
+    <Button
+        android:id="@+id/left1"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/irrigationOn1"
+        android:layout_marginStart="26dp"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/right1"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/left1"
+        android:layout_toEndOf="@+id/up"
+        android:text="Right" />
+
+
+    <Button
+        android:id="@+id/irrigationOn1"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@+id/up"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="78dp"
+        android:text="Irrigation On" />
+
+    <Button
+        android:id="@+id/irrigationOff1"
+        android:layout_width="128dp"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@+id/down"
+        android:layout_alignStart="@+id/irrigationOn1"
+        android:text="Irrigation Off" />
+
+    <Switch
+        android:id="@+id/jcb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/up"
+        android:layout_marginEnd="253dp"
+        android:checked="false"
+        android:text="JCB" />
+
+
+</RelativeLayout>
